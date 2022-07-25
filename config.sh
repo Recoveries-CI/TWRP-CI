@@ -3,17 +3,19 @@
 # Device
 export TWRP_MANIFEST="https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp"
 export TWRP_BRANCH="twrp-12.1"
-export DT_LINK="https://github.com/DozNaka/exynos3830-a21s-twrp.git -b android-12.1"
+#export TWRP_BRANCH="twrp-test"
+export DT_LINK="https://github.com/TeamWin/android_device_oneplus_cheeseburger_dumpling.git -b android-12.1"
 
-export DEVICE="a21s"
-export OEM="samsung"
+export DEVICE="cheeseburger_dumpling"
+export OEM="oneplus"
+#export PLATFORM="msm8998"
 export TARGET="recoveryimage"
 
 export OUTPUT="recovery.img"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
-#export KERNEL_SOURCE=""
+#export KERNEL_SOURCE="https://github.com/faoliveira78/android_kernel_oneplus_msm8998"
 
 # Extra Command
 export EXTRA_CMD=""

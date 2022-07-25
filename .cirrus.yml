@@ -3,8 +3,8 @@ env:
     CONFIG: config.sh
 
     # Telegram
-    TG_CHAT_ID: -1001191341989
-    TG_TOKEN: ENCRYPTED[c8a7eb621fd5184a3b84bc75e43af487a143f50f4dfe26002c9e4614e9efbbae9cadfad7c61fb18bc4404fb2bb3e40ab]
+    TG_CHAT_ID: ENCRYPTED[!7ac99e74abe810b4caaf9dc46b7947a14becade92db6cf893fbf771b115e597df7e19ff5f5c7b38047cf2d2d4385a249!]
+    TG_TOKEN: ENCRYPTED[!785d9cbf35b1760b5398e63ee98f72c8a47d6a35115defdaa1ce67bc3ea4aac824d21142cf3662fca64248c7917ed73a!]
 
     # Cirrus Specific Vars (Do *NOT* Change)
     CIRRUS_SHELL: bash
@@ -16,16 +16,16 @@ task:
       image: ghcr.io/sushrut1101/docker:latest
       cpu: 8
       memory: 20G
-      
+
   Checks_script:
-      - curl -sL https://raw.githubusercontent.com/DozNaka/exynos3830-a21s-twrp/android-12.1/scripts/checks.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/checks.sh | bash
 
   Sync_script:
-      - curl -sL https://raw.githubusercontent.com/DozNaka/exynos3830-a21s-twrp/android-12.1/scripts/sync.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/sync.sh | bash
 
   Build_script:
-      - curl -sL https://raw.githubusercontent.com/DozNaka/exynos3830-a21s-twrp/android-12.1/scripts/build.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/build.sh | bash
 
   Upload_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
-      - curl -sL https://raw.githubusercontent.com/DozNaka/exynos3830-a21s-twrp/android-12.1/scripts/upload.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/upload.sh | bash
