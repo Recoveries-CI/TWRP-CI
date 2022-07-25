@@ -26,5 +26,9 @@ git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!"
 # only if the Kernel Source is Specified in the Config
 [ ! -z "$KERNEL_SOURCE" ] && git clone --depth=1 --single-branch $KERNEL_SOURCE $KERNEL_PATH
 
+# Cherry-pick Fscrypt patches
+source build/envsetup.sh
+repopick 5405 5540
+
 # Exit
 exit 0
