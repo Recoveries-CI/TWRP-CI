@@ -3,10 +3,10 @@
 # Device
 export TWRP_MANIFEST="https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp"
 export TWRP_BRANCH="twrp-12.1"
-export DT_LINK="https://github.com/DozNaka/exynos3830-a21s-twrp.git -b android-12.1"
+export DT_LINK="https://github.com/faoliveira78/android_device_oneplus_cheeseburger_dumpling.git -b android-12.1"
 
-export DEVICE="a21s"
-export OEM="samsung"
+export DEVICE="cheeseburger_dumpling"
+export OEM="oneplus"
 export TARGET="recoveryimage"
 
 export OUTPUT="recovery.img"
