@@ -29,10 +29,8 @@ git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!"
 # Cherry-pick Fscrypt patches
 source build/envsetup.sh
 repopick 5405 5540
-#git -C system/vold fetch https://gerrit.twrp.me/android_system_vold refs/changes/40/5540/9
-#git -C system/vold cherry-pick FETCH_HEAD
-#git -C system/vold fetch https://github.com/faoliveira78/android_system_vold.git
-#git -C system/vold cherry-pick 7bf70fdcbed7254c4f27a56ed2d83d74b76114c2
+git -C bootable/recovery fetch https://github.com/faoliveira78/android_bootable_recovery.git
+git -C bootable/recovery cherry-pick fe9cfc3f1e26fabd4810cc4b3446a51b7936bed0
 
 # Exit
 exit 0
