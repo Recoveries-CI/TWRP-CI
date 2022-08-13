@@ -59,11 +59,11 @@ echo -e \
 
 Build Completed Successfully!
 
-Device: "${DEVICE}"
-Build System: "${TWRP_BRANCH}"
-Download Link: <a href=\"${DL_LINK}\">Here</a>
-Date: "$(date +%d\ %B\ %Y)"
-Time: "$(date +%T)"
+📱 Device: "${DEVICE}"
+🖥 Build System: "${TWRP_BRANCH}"
+⬇️ Download Link: <a href=\"${DL_LINK}\">Here</a>
+📅 Date: "$(date +%d\ %B\ %Y)"
+⏱ Time: "$(date +%T)"
 " > tg.html
 
 TG_TEXT=$(< tg.html)

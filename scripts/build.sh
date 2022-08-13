@@ -27,11 +27,11 @@ echo -e \
 "
 🛠️ CI|TWRP recovery
 
-The Build has been Triggered!
+✔️ The Build has been Triggered!
 
-Device: "${DEVICE}"
-Build System: "${TWRP_BRANCH}"
-Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
+📱 Device: "${DEVICE}"
+🖥 Build System: "${TWRP_BRANCH}"
+🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
 " > tg.html
 
 TG_TEXT=$(< tg.html)
