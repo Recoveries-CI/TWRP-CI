@@ -28,7 +28,7 @@ git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!"
 
 # Cherry-pick Fscrypt patches
 source build/envsetup.sh
-repopick 5405 5540 5779
+repopick 5405 5540
 
 # Exit
 exit 0
