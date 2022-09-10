@@ -3,8 +3,8 @@ env:
     CONFIG: config.sh
 
     # Telegram
-    TG_CHAT_ID: ENCRYPTED[!ec25788b316ba1d2b3c299ff1bebd742d7b545300f0f641fd5391d180ba5b9b84360b85f79c3517a1f777797c815c82c!]
-    TG_TOKEN: ENCRYPTED[!a3df037902a545d546c3e9df26e2fc9ddec0edf3c7b893574cfba9db624be84c445976a03a28c4c58984c37f00d017dd!]
+    TG_CHAT_ID: ENCRYPTED[!7ac99e74abe810b4caaf9dc46b7947a14becade92db6cf893fbf771b115e597df7e19ff5f5c7b38047cf2d2d4385a249!]
+    TG_TOKEN: ENCRYPTED[!785d9cbf35b1760b5398e63ee98f72c8a47d6a35115defdaa1ce67bc3ea4aac824d21142cf3662fca64248c7917ed73a!]
 
     # Cirrus Specific Vars (Do *NOT* Change)
     CIRRUS_SHELL: bash
@@ -16,16 +16,16 @@ task:
       image: ghcr.io/sushrut1101/docker:latest
       cpu: 8
       memory: 20G
-      
+
   Checks_script:
-      - curl -sL https://raw.githubusercontent.com/faoliveira78/TWRP-CI/main/scripts/checks.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/checks.sh | bash
 
   Sync_script:
-      - curl -sL https://raw.githubusercontent.com/faoliveira78/TWRP-CI/main/scripts/sync.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/sync.sh | bash
 
   Build_script:
-      - curl -sL https://raw.githubusercontent.com/faoliveira78/TWRP-CI/main/scripts/build.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/build.sh | bash
 
   Upload_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
-      - curl -sL https://raw.githubusercontent.com/faoliveira78/TWRP-CI/main/scripts/upload.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/upload.sh | bash
