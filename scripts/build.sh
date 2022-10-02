@@ -3,13 +3,13 @@
 # Source Configs
 source $CONFIG
 
-# A Function to Send Posts to Telegram
-telegram_message() {
-	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
-	-d chat_id="${TG_CHAT_ID}" \
-	-d parse_mode="HTML" \
-	-d text="$1"
-}
+# A Function to Send Posts to 
+# telegram_message() {
+#	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+#	-d chat_id="${TG_CHAT_ID}" \
+#	-d parse_mode="HTML" \
+#	-d text="$1"
+# }
 
 # Change to the Source Directry
 cd $SYNC_PATH
@@ -23,20 +23,20 @@ fi
 
 # Send the Telegram Message
 
-echo -e \
-"
-🛠️ CI|TWRP recovery
+#echo -e \
+#"
+#🛠️ CI|TWRP recovery
 
-✔️ The Build has been Triggered!
+#✔️ The Build has been Triggered!
 
-📱 Device: "${DEVICE}"
-🖥 Build System: "${TWRP_BRANCH}"
-🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
-" > tg.html
+#📱 Device: "${DEVICE}"
+#🖥 Build System: "${TWRP_BRANCH}"
+#🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
+#" > tg.html
 
-TG_TEXT=$(< tg.html)
+# TG_TEXT=$(< tg.html)
 
-telegram_message "${TG_TEXT}"
+# telegram_message "${TG_TEXT}"
 echo " "
 
 # Run the Extra Command
