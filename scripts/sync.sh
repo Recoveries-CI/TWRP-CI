@@ -33,6 +33,9 @@ if [ "$TWRP_BRANCH" = "twrp-test" ]; then
 	cd vendor/twrp
 	git fetch https://github.com/LineageOS/android_vendor_lineage.git lineage-20.0 && git cherry-pick eb72c64757f85add0a8ac927abb8d400fd20d928
 	cd $SYNC_PATH
+else
+	source build/envsetup.sh
+	repopick 5917
 fi
 
 # Exit
