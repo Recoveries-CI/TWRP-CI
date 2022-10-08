@@ -27,15 +27,9 @@ git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!"
 [ ! -z "$KERNEL_SOURCE" ] && git clone --depth=1 --single-branch $KERNEL_SOURCE $KERNEL_PATH
 
 # Cherry-pick gerrit patches
-if [ "$TWRP_BRANCH" = "twrp-test" ]; then
+if [ "$TWRP_BRANCH" = "twrp-12.1" ]; then
 	source build/envsetup.sh
-	repopick 5826 5827 5828 5829 5831 5832 5848 5872 5874 5889 5890 5896
-	cd vendor/twrp
-	git fetch https://github.com/LineageOS/android_vendor_lineage.git lineage-20.0 && git cherry-pick eb72c64757f85add0a8ac927abb8d400fd20d928
-	cd $SYNC_PATH
-else
-	source build/envsetup.sh
-	repopick 5917
+	repopick 5917 6106
 fi
 
 # Exit
