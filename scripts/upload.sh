@@ -22,11 +22,14 @@ echo "============================"
 echo "Uploading the Build..."
 echo "============================"
 
+#Get Version info stored in variables.h
+TW_MAIN_VERSION=$(sed -n -e 's/^.*#define TW_MAIN_VERSION_STR //p' bootable/recovery/variables.h | cut -d'"' -f2)
+
 # Change to the Output Directory
 cd out/target/product/${DEVICE}
 
-# Set FILENAME var
-FILENAME=$(echo $OUTPUT)
+#Rename build
+mv -v $OUTPUT twrp-${TW_MAIN_VERSION}-${TW_DEVICE_VERSION}-${DEVICE}.img
 
 # Upload to oshi.at
 if [ -z "$TIMEOUT" ];then
@@ -38,7 +41,7 @@ fi
 transfer wet $FILENAME > link.txt || { echo "ERROR: Failed to Upload the Build!" && exit 1; }
 
 # Mirror to oshi.at
-curl -T $FILENAME https://oshi.at/${FILENAME}/${OUTPUT} > mirror.txt || { echo "WARNING: Failed to Mirror the Build!"; }
+curl -T $FILENAME https://oshi.at/${FILENAME} > mirror.txt || { echo "WARNING: Failed to Mirror the Build!"; }
 
 DL_LINK=$(cat link.txt | grep Download | cut -d\  -f3)
 MIRROR_LINK=$(cat mirror.txt | grep Download | cut -d\  -f1)

@@ -10,8 +10,9 @@ export DEVICE="cheeseburger_dumpling"
 export OEM="oneplus"
 #export PLATFORM="msm8998"
 export TARGET="recoveryimage"
-
+export TW_DEVICE_VERSION="1"
 export OUTPUT="recovery.img"
+export FILENAME="twrp*.img"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
