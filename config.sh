@@ -16,7 +16,7 @@ export FILENAME="twrp*.img"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
-export KERNEL_SOURCE="https://github.com/greenforce-project/kernel_xiaomi_citrus_sm6115"
+export KERNEL_SOURCE="https://github.com/frstprjkt/kernel_xiaomi_chime-anya"
 
 # Extra Command
 export EXTRA_CMD=""
