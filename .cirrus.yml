@@ -18,14 +18,15 @@ task:
       memory: 20G
 
   Checks_script:
-      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/checks.sh | bash
+      - https://raw.githubusercontent.com/Luciogi/TWRP-CI-1/main/.cirrus.yml
+      - curl -sL https://raw.githubusercontent.com/Luciogi/TWRP-CI-1/main/scripts/checks.sh | bash
 
   Sync_script:
-      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/sync.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Luciogi/TWRP-CI-1/main/scripts/sync.sh | bash
 
   Build_script:
-      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/build.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Luciogi/TWRP-CI-1/main/scripts/build.sh | bash
 
   Upload_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
-      - curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/upload.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Luciogi/TWRP-CI-1/main/scripts/upload.sh | bash
