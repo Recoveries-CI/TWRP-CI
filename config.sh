@@ -6,8 +6,8 @@ export TWRP_BRANCH="twrp-12.1"
 #export TWRP_BRANCH="twrp-test"
 export DT_LINK="https://github.com/TeamWin/android_device_oneplus_cheeseburger_dumpling.git -b android-12.1"
 
-export DEVICE="cheeseburger_dumpling"
-export OEM="oneplus"
+export DEVICE="chime"
+export OEM="xiaomi"
 #export PLATFORM="msm8998"
 export TARGET="recoveryimage"
 export TW_DEVICE_VERSION="1"
@@ -16,7 +16,7 @@ export FILENAME="twrp*.img"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
-#export KERNEL_SOURCE="https://github.com/faoliveira78/android_kernel_oneplus_msm8998"
+export KERNEL_SOURCE="https://github.com/greenforce-project/kernel_xiaomi_citrus_sm6115"
 
 # Extra Command
 export EXTRA_CMD=""
