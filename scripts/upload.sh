@@ -29,7 +29,7 @@ TW_MAIN_VERSION=$(sed -n -e 's/^.*#define TW_MAIN_VERSION_STR //p' bootable/reco
 cd out/target/product/${DEVICE}
 
 #Rename build
-mv -v $OUTPUT twrp-${TW_MAIN_VERSION}-${TW_DEVICE_VERSION}-${DEVICE}.img
+mv -v $OUTPUT twrp-${TW_MAIN_VERSION}-${TW_DEVICE_VERSION}-${DEVICE}.img &> /dev/null
 
 # Upload to oshi.at
 if [ -z "$TIMEOUT" ];then
