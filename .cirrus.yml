@@ -13,9 +13,9 @@ task:
   name: "TWRP CI"
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:latest
+      image: ghcr.io/faoliveira78/docker:latest
       cpu: 8
-      memory: 20G
+      memory: 32G
 
   Checks_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/Recoveries-CI/TWRP-CI/main/scripts/checks.sh)"
