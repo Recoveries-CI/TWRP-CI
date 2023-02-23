@@ -10,7 +10,7 @@ export DEVICE="cheeseburger_dumpling"
 export OEM="oneplus"
 #export PLATFORM="msm8998"
 export TARGET="recoveryimage"
-export TW_DEVICE_VERSION="2"
+export TW_DEVICE_VERSION="3"
 export OUTPUT="recovery.img"
 export FILENAME="twrp*.img"
 
