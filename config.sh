@@ -6,7 +6,7 @@ export TWRP_BRANCH="twrp-12.1"
 #export TWRP_BRANCH="twrp-test"
 export DT_LINK="https://github.com/plente00/twrp_device_sony_griffin -b main"
 
-export DEVICE="bahamut"
+export DEVICE="griffin"
 export OEM="sony"
 
 export TARGET="bootimage"
