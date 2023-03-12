@@ -4,13 +4,13 @@
 export TWRP_MANIFEST="https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp"
 export TWRP_BRANCH="twrp-12.1"
 #export TWRP_BRANCH="twrp-test"
-export DT_LINK="https://github.com/TeamWin/android_device_oneplus_cheeseburger_dumpling.git -b android-12.1"
+export DT_LINK="https://github.com/faoliveira78/android_device_oneplus_cheeseburger.git -b android-13"
 
-export DEVICE="cheeseburger_dumpling"
+export DEVICE="cheeseburger"
 export OEM="oneplus"
 #export PLATFORM="msm8998"
 export TARGET="recoveryimage"
-export TW_DEVICE_VERSION="3"
+export TW_DEVICE_VERSION="2"
 export OUTPUT="recovery.img"
 export FILENAME="twrp*.img"
 
