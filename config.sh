@@ -4,14 +4,14 @@
 export TWRP_MANIFEST="https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp"
 export TWRP_BRANCH="twrp-12.1"
 #export TWRP_BRANCH="twrp-test"
-export DT_LINK="https://github.com/faoliveira78/android_device_oneplus_cheeseburger.git -b android-13"
+export DT_LINK="https://github.com/plente00/android_device_sony_bahamut_kddi -b android-11"
 
-export DEVICE="cheeseburger"
-export OEM="oneplus"
-#export PLATFORM="msm8998"
-export TARGET="recoveryimage"
-export TW_DEVICE_VERSION="2"
-export OUTPUT="recovery.img"
+export DEVICE="bahamut_kddi"
+export OEM="sony"
+#export PLATFORM=""
+export TARGET="bootimage"
+export TW_DEVICE_VERSION=""
+export OUTPUT="boot.img"
 export FILENAME="twrp*.img"
 
 # Kernel Source
