@@ -36,7 +36,7 @@ if [ "$TWRP_BRANCH" = "twrp-12.1" ]; then
 		git -C bootable/recovery fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/63/6363/1 && git -C bootable/recovery cherry-pick FETCH_HEAD
 	else
 		source build/envsetup.sh
-		repopick 6235 6236 6289 6291 6363
+		repopick 6289 6363
 	fi
 fi
 
