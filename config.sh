@@ -4,7 +4,7 @@
 export TWRP_MANIFEST="https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp"
 export TWRP_BRANCH="twrp-12.1"
 #export TWRP_BRANCH="twrp-test"
-export DT_LINK="https://github.com/stuepz/mt6781_viva-twrp.git -b twrp-12.1"
+export DT_LINK="https://github.com/stuepz/twrp.git -b twrp"
 
 export DEVICE="viva"
 export OEM="xiaomi"
