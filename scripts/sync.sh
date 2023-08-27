@@ -27,18 +27,18 @@ git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!"
 [ ! -z "$KERNEL_SOURCE" ] && git clone --depth=1 --single-branch $KERNEL_SOURCE $KERNEL_PATH
 
 # Cherry-pick gerrit patches
-if [ "$TWRP_BRANCH" = "twrp-12.1" ]; then
-	if [[ "$TWRP_MANIFEST" == *"faoliveira78"* ]]; then
-		git -C bootable/recovery fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/35/6235/21 && git -C bootable/recovery cherry-pick FETCH_HEAD
-		git -C system/vold fetch https://gerrit.twrp.me/android_system_vold refs/changes/36/6236/19 && git -C system/vold cherry-pick FETCH_HEAD
-		git -C bootable/recovery fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/89/6289/2 && git -C bootable/recovery cherry-pick FETCH_HEAD
-		git -C device/qcom/twrp-common fetch https://gerrit.twrp.me/android_device_qcom_twrp-common refs/changes/91/6291/1 && git -C device/qcom/twrp-common cherry-pick FETCH_HEAD
-		git -C bootable/recovery fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/63/6363/1 && git -C bootable/recovery cherry-pick FETCH_HEAD
-	else
-		source build/envsetup.sh
-		repopick 6289 6363
-	fi
-fi
+#if [ "$TWRP_BRANCH" = "twrp-12.1" ]; then
+#	if [[ "$TWRP_MANIFEST" == *"faoliveira78"* ]]; then
+#		git -C bootable/recovery fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/35/6235/21 && git -C bootable/recovery cherry-pick FETCH_HEAD
+#		git -C system/vold fetch https://gerrit.twrp.me/android_system_vold refs/changes/36/6236/19 && git -C system/vold cherry-pick FETCH_HEAD
+#		git -C bootable/recovery fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/89/6289/2 && git -C bootable/recovery cherry-pick FETCH_HEAD
+#		git -C device/qcom/twrp-common fetch https://gerrit.twrp.me/android_device_qcom_twrp-common refs/changes/91/6291/1 && git -C device/qcom/twrp-common cherry-pick FETCH_HEAD
+#		git -C bootable/recovery fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/63/6363/1 && git -C bootable/recovery cherry-pick FETCH_HEAD
+#	else
+#		source build/envsetup.sh
+#		repopick 6289 6363
+#	fi
+#fi
 
 # Exit
 exit 0
